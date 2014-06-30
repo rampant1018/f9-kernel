@@ -47,6 +47,8 @@ CPPFLAGS = \
 CFLAGS = \
 	-std=gnu99 -isystem \
 	-nostdlib -ffreestanding \
+	-finstrument-functions \
+	-finstrument-functions-exclude-file-list=include/,platform/,kernel/ \
 	$(CPPFLAGS) $(CFLAGS_CPU) $(CFLAGS_OPT) $(CFLAGS_DEBUG) $(CFLAGS_WARN) $(CFLAGS_y) $(CFLAGS_MISC_DEFINE)
 
 LDFLAGS = \
